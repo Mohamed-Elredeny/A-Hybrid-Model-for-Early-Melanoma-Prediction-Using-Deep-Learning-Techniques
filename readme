@@ -1,1 +1,31 @@
 A Hybrid Model for Early Melanoma Prediction Using Deep Learning Techniques
+melano_project/
+├── datasets/                # Store your datasets here
+│   ├── yolo_data.yaml       # YOLO dataset configuration
+│   ├── faster_rcnn_data.json
+│   ├── hybrid_data.json
+├── models/                  # Contains all model classes
+│   ├── yolo_model.py        # YOLOv9 class
+│   ├── faster_rcnn_model.py # Faster R-CNN class
+│   ├── hybrid_model.py      # Melano Hybrid Model class
+├── train/                   # Training scripts
+│   ├── train_yolo.py
+│   ├── train_faster_rcnn.py
+│   ├── train_hybrid.py
+├── evaluate/                # Evaluation scripts
+│   ├── evaluation.py        # Precision, recall, F1-score, confusion matrix
+├── dataset.py               # Dataset utilities
+├── requirements.txt         # Required Python libraries
+└── README.md
+
+How to Run
+1. Install Dependencies:
+pip install -r requirements.txt
+
+2. Train Models:
+python train/train_yolo.py
+python train/train_faster_rcnn.py
+python train/train_hybrid.py
+
+3. Evaluate Models:
+python evaluate/evaluation.py
